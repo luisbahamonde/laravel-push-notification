@@ -8,6 +8,11 @@ Installation
 
 Update your `composer.json` file to include this package as a dependency
 
+Laravel 6.x, 7.x
+```
+composer require luisbahamonde/laravel-push-notification
+```
+
 Laravel 5 & Lumen
 
 ```json
@@ -38,7 +43,7 @@ Alias the PushNotification facade by adding it to the aliases array in the `app/
 
 Copy the config file into your project by running: (Lumen users skip this)
 
-Laravel 5
+Laravel 5.x, 6.x, 7.x
 ```php
 php artisan vendor:publish --provider="Davibennun\LaravelPushNotification\LaravelPushNotificationServiceProvider" --tag="config"
 ```
