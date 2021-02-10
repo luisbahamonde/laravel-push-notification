@@ -8,17 +8,17 @@ Installation
 
 Update your `composer.json` file to include this package as a dependency
 
-#####Laravel 6.x, 7.x
+##### Laravel 6.x, 7.x
 ```
 composer require luisbahamonde/laravel-push-notification
 ```
 
-#####Laravel 5 & Lumen
+##### Laravel 5 & Lumen
 
 ```json
 "davibennun/laravel-push-notification": "dev-laravel5"
 ```
-#####Laravel 4.*
+##### Laravel 4.*
 ```json
 "davibennun/laravel-push-notification": "dev-master"
 ```
