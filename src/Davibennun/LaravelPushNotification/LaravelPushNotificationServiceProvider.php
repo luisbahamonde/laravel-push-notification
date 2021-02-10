@@ -17,11 +17,10 @@ class LaravelPushNotificationServiceProvider extends ServiceProvider
      * Bootstrap the application services.
      *
      * @return void
+     * @throws \Illuminate\Contracts\Container\BindingResolutionException
      */
     public function boot()
     {
-        //$this->package('davibennun/laravel-push-notification');
-
         if (!$this->app->runningInConsole()) {
             return;
         }
@@ -29,7 +28,7 @@ class LaravelPushNotificationServiceProvider extends ServiceProvider
         $configPath = $this->app->make('path.config');
 
         $this->publishes([
-            __DIR__ . '/../Config/config.php' => $configPath . '/push-notification-plus.php',
+            __DIR__ . '/../Config/config.php' => $configPath . '/push-notification.php',
         ], 'config');
     }
 
@@ -38,11 +37,6 @@ class LaravelPushNotificationServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        /*
-        $this->app['pushNotification'] = $this->app->share(function ($app) {
-            return new PushNotification();
-        });
-        */
 
         $this->app->singleton('PushNotification', function ($app) {
             return new PushNotification();
